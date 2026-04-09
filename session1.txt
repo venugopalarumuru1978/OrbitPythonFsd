@@ -1,0 +1,64 @@
+Python Full Stack
+-------------------
+FrontEnd Part
+
+HTML, CSS
+JAVASCRIPT
+BOOTSTRAP
+REACT
+-------------
+PYTHON 
+-------------
+DJANGO FRAMEWORK
+
+	Web Framework for Python
+	used to develop web apps  and REST API's
+-------------------
+PYTHON WEB APP
+---------
+1. HTML, CSS & JS
+2. PYTHON, DJANGO
+
+JAVA WEB APP
+----------------
+1. HTML, CSS & JS
+2. JAVA FUNDAS, SERVLETS, JSP
+
+DOTNET WEB APP
+-------------------
+1. HTML, CSS & JS
+2. ASP.NET, ASP.NET MVC
+
+========================
+
+Front End Part
+
+HTML, CSS AND JS
+BOOTSTRAP
+REACT
+
+
+
+
+
+	for developing any application, there are 3 layers
+
+	1. Presentation Layer :-  UI (User Interface)
+			Ex:- Web App(Html, Css, JS)
+	2. Business Layer :-  Functionality  
+			Ex:-  Java/Python/Dotnet
+	3. Database Layer :-  To store data securly
+			Ex:-  MySQL/Oracle/....
+
+
+
+
+
+
+
+
+
+
+
+
+

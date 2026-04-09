@@ -1,0 +1,113 @@
+CSS:-  Cascading Style Sheets
+
+These are used to beautify the web pages.  i.e.  applying styles for the html elements. 
+
+it can be done in 3 ways
+
+1. Inline Styling
+2. Page Level Styling
+3. Site Level Styling
+
+1. Inline Styling :-  
+	These css are used to specify styles for every tag separately.
+	It can be done for every tag with following property
+
+	<tagname style="property:value;...>
+		action
+	</tagname>
+
+	
+background for page:- 
+<body  style="background-color: green;">
+
+styling for h1 tag
+<h1 
+    style="text-align: center;
+    color:firebrick;
+    background-color: gold;">
+    
+    This is CSS Session</h1>
+
+Page Level Styling:- 
+
+this type of css is defined in <head> tag by using <style> tag.
+
+here it can be done in two ways 
+
+1.  specify css for tag as follows
+	<style>
+		tagname
+		{
+			prop:value;
+			prop:value;
+			.....
+		}
+	</style>
+here once we define css for a tag, that css automatically applies for that tag in web page whereever it is used. 
+
+
+<style>
+        body
+        {
+           background-color: burlywood;
+        }
+
+        h1{
+            text-align: center;
+            color:firebrick;
+            background-color: gold;
+            border-radius: 10px;
+        }
+
+        p{
+            text-align: justify;
+            font-size: larger;
+	color:whitesmoke;
+            background-color: brown; 
+            padding: 20px;
+            border-radius: 40px;
+        }
+
+    </style>
+
+2.  Creating User defined css classes :- 
+
+	to create css class
+
+		.css_classname{
+
+			propname:value;
+			......
+		}
+
+Once we define css_class, that can be added to the tag with following prop
+
+	<tagname  class="css_class" .... />
+
+
+<style>
+        .head1{
+            text-align: center;
+            color:firebrick;
+            background-color: gold;
+            border-radius: 10px;
+        }
+
+
+        .para1{
+            text-align: justify;
+            font-size: larger;color:whitesmoke;
+            background-color: brown; 
+            padding: 20px;
+            border-radius: 40px;
+        }
+
+
+</style>
+
+
+<body>
+<h1  class="head2">.....</h1>
+<p class="para1">....</p>
+
+</body>
