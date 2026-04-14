@@ -1,0 +1,42 @@
+HTML Forms :-  these are used to provide input to the web page. 
+
+Html provides different type of tools to work with forms. the tools like textbox, radiobutton, checkbox, 
+dropdownlist, etc
+
+To create these tools html provides following different tags, which are as follows
+textbox :- this tool is used give single line of text. 
+	<input  type="text"  name/id="name of tool"  value="val...."   ..... />
+passwordbox :-  this tool as same as textbox but text is invisiable. 
+	<input  type="password"  name/id="name of tool"  value="val...."   ..... />
+buttons :-  these are used to perform any task once we enter some inputs on web pages. 
+there are 3 types of buttons
+	button :-  it is used to execute scripts(javascript/vbscript/....).
+	submit :-  it is used to submit page to the server.
+	reset :-    it is used to refresh / reload page. 
+<input type="button/submit/reset"   value="Visiable Text"   name/id="name of tool " ...... />
+
+radiobutton :- this tool is used to select any one option from multiple options. 
+	here for one group of radio buttons, name property must be same.
+	<input type="radio"   name="grop name"   value="val ... " /> Visiable Text
+
+Checkbox :-  this tool is used to select multiple options from group of options.
+<input type="checkbox"   name="name of tool"   value="val ... " /> Visiable Text
+
+Dropdownlist :-  this tool is used to select anyone option from group of options.
+	<select name/id="name of tool">
+		<option value="val">Visiable Text-1</option>
+		..................
+		<option value="val">Visiable Text-n</option>
+	</select>
+textbox with multiline :- 
+this tag is used to enter multiple lines of text. 
+	<textarea   name="name of tool"  rows="no of lines"  cols ="no of chars">
+	</textarea>
+numeric textbox :- it allows to have only numbers. 
+<input type="number"  name="name of tool"  min="start val"  max="end val" />
+emailbox :- it allows to have only email formated text.   (abc@gmail.com)
+	<input type="email"   name/id="name of tool"    value="default email " />
+datebox :-   it allows to select dates from the box. 
+	<input type="date"   name/id="name of tool"    />
+phonebox :-  it allows to enter telephone numbers only. 
+	<input type="tel"   name/id="name of tool"    />

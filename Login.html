@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        
+        body{
+            background-image: url('Pic3.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .textbox{
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+            color:darkblue;
+            border-radius: 10px;
+        }
+
+        .btn1
+        {
+            width: 100px;
+            height: 30px;
+            background-color: green;
+            color:whitesmoke;
+            border-radius: 10px;
+        }
+
+        .btn2
+        {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            color:whitesmoke;
+            border-radius: 10px;
+        }
+
+        .para{
+            
+            width:30%;
+            height: 300px;
+            border-style: solid;
+            border-color: brown;
+            padding-top: 30px;
+            padding-left:100px;
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Login Page Demo</h1>
+    <p   class="para">
+            <label style="text-align: left;width: 100%;">Username</label><br />
+            <input type="text"  name="txtUser" class="textbox"  placeholder="Username"  />
+            <br /><span id="uinfo" style="color: red;"></span>
+            <br /><br />
+            <input type="password"  name="txtPass" class="textbox"  placeholder="Password" />
+            <br /><span id="pinfo" style="color: red;"></span>
+            <br /><br />
+            <input type="submit"  class="btn1"  value="Click Me"   />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset"  class="btn2"  value="Reset"   />
+        </p>
+</body>
+</html>
