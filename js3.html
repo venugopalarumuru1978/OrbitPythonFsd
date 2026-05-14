@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">TextBox Demo</h1>
+    <hr />
+    <form name="frmTest" >
+    <p style="text-align: center;">
+        <label>Value 1</label><br />
+        <input type="text"  name="txtVal1" placeholder="Value - 1" />
+        <br /><label>Value 2</label><br />
+        <input type="text"  name="txtVal2" placeholder="Value - 2" />
+        <br /><br />
+        <input type="button"  value="Addition" onclick=" testAddition()" />
+
+        <input type="reset"  value="Clear " onclick="ClearForm()" />
+    </p>
+    </form>
+
+    <h2 style="text-align: center;"  id="resInfo">Result</h2>
+
+    <script  type="text/javascript">
+        function testAddition()
+        {
+
+            var x = parseFloat(frmTest.txtVal1.value);
+            var y = parseFloat(frmTest.txtVal2.value);
+
+            var sm = x+y;
+
+            document.getElementById("resInfo").innerHTML = "Addition : " + sm;
+        }
+
+        function ClearForm()
+        {
+            document.getElementById("resInfo").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
