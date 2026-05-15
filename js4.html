@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">Radio Button</h1>
+
+    <form  name="frmRdo">
+
+        <p style="text-align: center;">
+
+            <input type="radio" name="rdoBank"  value="CC" onchange="testBank()"/>
+            <label>Credit Card</label>
+
+            <input type="radio" name="rdoBank"  value="DC" onchange="testBank()" />
+            <label>Debit Card</label>
+
+            <input type="radio" name="rdoBank"  value="NB" onchange="testBank()" />
+            <label>Net Banking</label>
+
+            <input type="radio" name="rdoBank"  value="UPI" onchange="testBank()" />
+            <label>UPI Payments</label>
+        </p>
+    </form>
+
+    <h2 style="text-align: center;" id="resInfo">
+        Result
+    </h2>
+
+    <hr />
+
+    <script type="text/javascript">
+        function testBank()
+        {
+            var  pay =  frmRdo.rdoBank.value;
+            //alert(pay)
+            var result = "";
+            if(pay=="CC")
+                result = "Ur Payment is Credit Card";
+            if(pay=="DC")
+                result = "Ur Payment is Debit Card";
+            if(pay=="NB")
+                result = "Ur Payment is Net Banking";
+            if(pay=="UPI")
+                result = "Ur Payment is UPI Payment";
+
+            document.getElementById("resInfo").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">DropdownList</h1>
+    <form  name="frmLoc">
+
+        <p style="text-align: center;">
+            <label>Location</label>
+            <select  name="ddlLoc"  onchange="getCity()">
+                <option value="-1">Select City</option>
+                <option  value="Hyderabad">Hyderabad</option>
+                <option  value="Bangalore">Bangalore</option>
+                <option  value="Pune">Pune</option>
+                <option  value="Amaravathi">Amaravathi</option>
+                <option  value="Delhi">Delhi</option>
+            </select>
+
+        </p>
+
+    </form>
+    <hr />
+     <h2 style="text-align: center;" id="resInfo">
+        Result
+    </h2>
+
+    <script type="text/javascript">
+        function getCity()
+        {
+
+            var cname = frmLoc.ddlLoc.value;
+            //alert(cname);
+            if(cname!="-1")
+            document.getElementById("resInfo").innerHTML = "Ur city name is " + cname;
+        else
+            alert("Please select any one city");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">Radio Button</h1>
+
+    <form  name="frmRdo">
+
+        <p style="text-align: center;">
+
+            <label>Person Name</label><br />
+            <input type="text"  name="txtPname"  placeholder="Enter Person Name" />
+
+            <br /><br />
+
+            <label>Gender </label>
+            <input type="radio" name="rdoGender"  value="Male" />
+            <label>Male</label>
+
+            <input type="radio" name="rdoGender"  value="Female" />
+            <label>Female</label>
+    
+            <br /><br />
+
+            <input type="button"  value="Click Me"  onclick="testPerson()" />
+
+
+        </p>
+    </form>
+
+    <h2 style="text-align: center;" id="resInfo">
+        Result
+    </h2>
+
+    <hr />
+
+    <script type="text/javascript">
+        function testPerson()
+        {
+            var result = frmRdo.txtPname.value;
+            result = result + " is a ";
+
+            var gen = frmRdo.rdoGender.value;
+
+            if(gen=="Male")
+                result = result + gen + " Person";
+
+            if(gen=="Female")
+                result = result +  gen + " Person";
+
+            document.getElementById("resInfo").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
