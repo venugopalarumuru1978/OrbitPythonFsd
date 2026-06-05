@@ -11,6 +11,9 @@ function NavBar()
                 <Link to="/reg">Register</Link>
                 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                 <Link to="/contact">Contact</Link>
+                &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <Link to="/frm1">Form-1</Link>
+
             </p>
         </div>
     );

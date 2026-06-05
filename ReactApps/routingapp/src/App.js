@@ -4,6 +4,7 @@ import Register from './Register';
 import Contact from './Contact';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './NavBar';
+import Form1 from './Form1';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" exact Component={Login}/>
           <Route path="/reg" exact Component={Register}/>
           <Route path="/contact" exact Component={Contact}/>
+          <Route path="/frm1" exact Component={Form1}/>
         </Routes>
       </BrowserRouter>
     </div>
