@@ -38,7 +38,7 @@ Steps :-
 2.  Class Components
 	these components are create with class and it should be inherited React.Component
 
-			class <classname> extends React.Component
+class <classname> extends React.Component
 			{
 				logic part
 			

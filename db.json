@@ -1,0 +1,55 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "sname": "Pavan",
+      "course": "Java",
+      "fees": 12000
+    },
+    {
+      "id": "2",
+      "sname": "Murali",
+      "course": "Java",
+      "fees": 12000
+    },
+    {
+      "id": "3",
+      "sname": "Kavya",
+      "course": "Java",
+      "fees": 12000
+    },
+    {
+      "id": "0B_--QESRns",
+      "sname": "Sahasra",
+      "course": "Java",
+      "fees": "15000.00"
+    }
+  ],
+  "Employee": [
+    {
+      "id": "11",
+      "ename": "Kalyan",
+      "job": "Developer",
+      "salary": 30000
+    },
+    {
+      "id": "12",
+      "ename": "Kamala",
+      "job": "Tester",
+      "salary": 20000
+    },
+    {
+      "id": "yuhii07sC-0",
+      "ename": "Harsha",
+      "job": "Developer",
+      "salary": 30000
+    },
+    {
+      "id": "AaH38d9woNM",
+      "ename": "Ramana",
+      "job": "Developer",
+      "salary": 30000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

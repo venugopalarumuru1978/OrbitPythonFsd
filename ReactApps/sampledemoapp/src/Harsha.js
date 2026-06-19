@@ -9,7 +9,6 @@ function Harsha()
         setBval(e.target.value);
      }
 
-
      const btnClick = () =>{
         if(bval==="cc")
             setRes('Ur payment using Credit Card');
@@ -31,7 +30,7 @@ function Harsha()
                 <input type="radio"  value="nb" name="rdoBank" onChange={bankProcess} />
                 <label>Net Banking</label>
                 <br />
-    <input type="button" value="Click me" onClick={btnClick} />
+            <input type="button" value="Click me" onClick={btnClick} />
                 <br />
                 <h2>{res}</h2>           
 
