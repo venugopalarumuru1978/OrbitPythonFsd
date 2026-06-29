@@ -20,9 +20,9 @@ function SingleStd()
     return(
         <div>
             <h1 style={{textAlign:"center"}}>View Student Information</h1>
-            <h2>Roll Number {id}</h2>
+            <h2>Welcome To :  {std.sname}</h2>
             <hr />
-                <table width="100%" border="1">
+                <table className="table table-dark table-hover">
                 <thead>
                 <tr>
                     <th>Roll Number</th>
@@ -42,7 +42,7 @@ function SingleStd()
         </table>
             <p style={{textAlign:"center"}}>
 
-                <input type="button"  value="Back" onClick={()=>{navigate("/viewall")}} />
+                <input type="button"  value="Back" className="btn btn-warning" onClick={()=>{navigate("/viewall")}} />
 
             </p>
         </div>

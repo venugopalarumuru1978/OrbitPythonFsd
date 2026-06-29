@@ -15,15 +15,21 @@ function ModStd()
             console.log(res.data);
             setStd(res.data);
         });
-    },[]);
+    },[id]);
 
+    const UpdateStd = (e) =>{
+        e.preventDefault();
+        axios.put("http://localhost:3400/student/" + id, std)
+        .then((res)=>{
+            navigate("/viewall");
+        });
+    }
 
     return(
         <div>
             <h1 style={{textAlign:'center'}}>Modify Student</h1>
             <hr />
-        <h2>Roll Number : {id}</h2>        
-
+            <form method="post" onSubmit={UpdateStd}>
             <p style={{textAlign:"center"}}>
                 <label>Student ID</label><br />
                 <input type="text" name="txtSid" value={std.id}
@@ -40,14 +46,13 @@ function ModStd()
                 <label>Course Fees</label><br />
                 <input type="text" name="txtSfees" value={std.fees}
                 onChange={(e)=>{setStd({...std, fees:e.target.value})}} /><br />
+<br />
+                <input type="submit"  value="Modify Student" className="btn btn-primary" />  &nbsp;&nbsp;
 
-                <input type="button"  value="Modify Student" />  &nbsp;&nbsp;
-                                <input type="button" value="Back" 
-                            onClick={()=>{navigate("/viewall")}} />
-
+                <input type="button" value="Back" className="btn btn-warning" onClick={()=>{navigate("/viewall")}} />                
             </p>
-
-        </div>
+            </form>
+                    </div>
     );
 }
 

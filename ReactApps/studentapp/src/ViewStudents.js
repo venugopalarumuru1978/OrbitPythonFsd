@@ -30,12 +30,12 @@ function ViewStudents()
             <h1 style={{textAlign:"center"}}>All Students Information</h1>
             <hr />
             <p style={{textAlign:"center"}}>
-                            <Link to="/reg">New Student</Link>
-                            &nbsp;&nbsp;|&nbsp;&nbsp;
-                            <Link to="/viewall">View All Students</Link>
+                            <Link to="/reg" className="btn btn-info btn-sm">New Student</Link>
+                            &nbsp;&nbsp;
+                            <Link to="/viewall" className="btn btn-info btn-sm">View All Students</Link>
               </p>
              <hr />
-            <table width="100%" border="1">
+            <table className="table table-success table-striped">
                 <thead>
                 <tr>
                     <th>Roll Number</th>
@@ -54,14 +54,14 @@ function ViewStudents()
                             <td>{std.course}</td>
                             <td>{std.fees}</td>
                             <td>
-                                <input type="button"  value="Delete" onClick={()=>{delStudent(std.id)}} />
+                                <input type="button"  value="Delete" className='btn btn-danger' onClick={()=>{delStudent(std.id)}} />
 
                                 &nbsp;&nbsp;&nbsp;
 
-                                <input type="button" value="View" 
+                                <input type="button" value="View" className='btn btn-info'
                                                 onClick={()=>{navigate("/sstd/" + std.id)}} />
                                                          &nbsp;&nbsp;&nbsp;
-                                <input type='button'  value="Modify" 
+                                <input type='button'  value="Modify" className='btn btn-warning'
                                                     onClick={()=>{navigate("/smod/" + std.id)}} />
                             </td>
                         </tr>
