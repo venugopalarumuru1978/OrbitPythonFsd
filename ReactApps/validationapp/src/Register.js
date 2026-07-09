@@ -19,11 +19,8 @@ function Register()
             errors.phErr = "Phone Number must be 10 digits";
             flag = false;
         }
-
         setErrors(errors);
-
-        return flag;
-        
+        return flag;       
     }
 
     const RegisterPerson = (e) =>{
