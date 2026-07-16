@@ -5,15 +5,18 @@ function ViewAll()
 {
     const navigate = useNavigate();
     const [lDetails, setLDetails] = useState('');
-
+    
     useEffect(()=>{
+        
         if(sessionStorage.getItem('adInfo')!=null)
         {
             setLDetails(sessionStorage.getItem('adInfo'));
         }
         else
+        {
             navigate('/login');
-    },[]);
+        }
+    },[navigate]);
 
 
     return(
