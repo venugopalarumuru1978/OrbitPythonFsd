@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <bean  id="empObj"   class="TestPack.Employee">
+  	<property name="ename" value="Kalyan"/>
+  	<property name="sal" value="10000"/>
+  	<property name="job" value="Manager"/>
+  </bean>
+    
+  <bean  id="stdObj"  class="TestPack.Student">
+  	<property name="sname" value="Praveen"/>
+  	<property name="courses">
+  		<list>
+  			<value>Java</value>
+  			<value>Python</value>
+  			<value>JavaScript</value>
+  		</list>
+  	</property>
+  	
+  	<property name="qua">
+  		<set>
+  			<value>M.Tech</value>
+  			<value>B.Tech</value>
+  			<value>M.Tech</value>
+  		</set>
+  	</property>
+  	
+  	<property name="course_trainer">
+  		<map>
+  			<entry  key="Java" value="Venugopal"/>
+  			<entry  key="React" value="Satyam"/>
+  		</map>
+  	</property>
+  	
+  	<property name="course_fees">
+  		<props>
+  			<prop key="Java">15000.00</prop>
+  			<prop key="React">12000.00</prop>
+  		</props>
+  	</property>
+  	
+  </bean>
+  
+  <!--  constructor DI -->
+  <bean id="perObj"  class="TestPack.Person">
+  	<constructor-arg name="pname" value="Kiran"/>
+  	<constructor-arg name="email" value="Kiran@gmail.com"/>
+  	<constructor-arg name="phone" value="9090981234"/>
+  </bean>
+  
+  </beans>

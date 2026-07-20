@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="curObj"  class="TestPack.Course">
+		<property name="cname" value="Java"/>
+		<property name="fees" value="10000.00"/>
+	</bean>  
+	
+	<bean id="stdObj"  class="TestPack.StdInfo">
+		<property name="sname" value="Ganesh"/>
+		<property name="curs" ref="curObj" />
+	</bean>
+	
+	<!--  Nested Bean -->
+
+	<bean id="std1Obj"  class="TestPack.StdInfo">
+		<property name="sname" value="Ramya"/>
+		<property name="curs">
+			<bean class="TestPack.Course">
+				<property name="cname" value="React"/>
+				<property name="fees" value="12000.00"/>				
+			</bean>
+		</property>
+	</bean>
+	
+
+  </beans>
