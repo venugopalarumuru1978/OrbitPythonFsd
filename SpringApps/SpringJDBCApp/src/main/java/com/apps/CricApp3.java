@@ -1,25 +1,27 @@
 package com.apps;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.beans.Cricket;
 import com.beans.CricketOperations;
 
-public class CricApp1 {
+public class CricApp3 {
 
 	public static void main(String[] args) {
 		ApplicationContext  appObj = new ClassPathXmlApplicationContext("beanConfig.xml");
 		
 		CricketOperations  co =  (CricketOperations)appObj.getBean("dbCon");
 		
-		Cricket ck = new Cricket();
-		ck.setCrno(101);
-		ck.setCrname("Rahul");
-		ck.setRuns(10000);
-		ck.setType_of_game("Oneday");
+		List<Cricket>  cAll =  co.ShowAll();
 		
-		co.AddCricket(ck);
+		for(Cricket c : cAll)
+		{
+			System.out.println(c.getCrno() + "\t" + c.getCrname() + "\t" + c.getRuns() + "\t" + c.getType_of_game());
+		}
+		
 		
 	}
 

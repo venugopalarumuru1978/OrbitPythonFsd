@@ -6,6 +6,7 @@ public class Cricket {
 	private String crname;
 	private int runs;
 	private String type_of_game;
+	
 	public int getCrno() {
 		return crno;
 	}
