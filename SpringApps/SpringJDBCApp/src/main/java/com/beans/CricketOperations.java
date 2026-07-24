@@ -33,11 +33,38 @@ public class CricketOperations {
 	public List<Cricket> ShowAll()
 	{
 		String sqlcmd = "Select * from Cricket";
-		List<Cricket>  crkAll = new ArrayList<Cricket>();
-		
-		crkAll =  jdbc.query(sqlcmd, new BeanPropertyRowMapper(Cricket.class));
-		
+		List<Cricket>  crkAll = new ArrayList<Cricket>();		
+		crkAll =  jdbc.query(sqlcmd, new BeanPropertyRowMapper(Cricket.class));	
 		return crkAll;
 	}
+	
+	public Cricket Search(int cid)
+	{
+		Cricket cObj = null;
+		try {
+			String sqlcmd = "Select * from Cricket where crno=?";
+			cObj = (Cricket)jdbc.queryForObject(sqlcmd, 
+					new Object[] {cid}, 
+					new BeanPropertyRowMapper(Cricket.class));			
+		} catch (Exception e) {
+			cObj = null;
+		}
 		
+		return cObj;
+	}
+	
+	public void Delete(int cid)
+	{
+		String sqlcmd = "Delete from Cricket where crno=?";
+		jdbc.update(sqlcmd, new Object[] {cid});
+		System.out.println("Cricketer is Deleted...");		
+	}
+	
+	public void UpdateCricName(String crname, int cid)
+	{
+		String sqlcmd = "Update Cricket set crname=? where crno=?";
+		jdbc.update(sqlcmd, new Object[] {crname, cid});
+		System.out.println("Cricketer is Updated...");		
+	}
+	
 }
