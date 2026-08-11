@@ -19,21 +19,17 @@ public class Dept {
 	@Id
 	private int deptid;	
 	private String deptname;
-	
 	 	
 	 	 @OneToMany(mappedBy = "dept", cascade = CascadeType.ALL)
 	     private List<Employee> employees = new ArrayList<>();
-
 
 		 public int getDeptid() {
 			 return deptid;
 		 }
 
-
 		 public void setDeptid(int deptid) {
 			 this.deptid = deptid;
 		 }
-
 
 		 public String getDeptname() {
 			 return deptname;

@@ -2,6 +2,7 @@ package com.apps;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 import com.beans.Dept;
 import com.beans.Employee;
 
-public class OneToManyApp {
+public class AddDepts {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,27 +22,13 @@ public class OneToManyApp {
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sesObj = sf.openSession();
 		Transaction trans = sesObj.beginTransaction();
+		Scanner sc = new Scanner(System.in);
 		
 		Dept dpt = new Dept();
-		dpt.setDeptid(10);
-		dpt.setDeptname("Education");
-		
-		List<Employee> emplist = new ArrayList<Employee>();
-		
-		Employee emp = new Employee();
-		emp.setEmpno(101);
-		emp.setEmpname("Ravi");
-		emp.setDept(dpt);
-		
-		emplist.add(emp);
-		
-		emp = new Employee();
-		emp.setEmpno(102);
-		emp.setEmpname("Kavi");
-		emp.setDept(dpt);
-		emplist.add(emp);
-		
-		dpt.setEmployees(emplist);
+		System.out.println("Dept ID ");
+		dpt.setDeptid(sc.nextInt());
+		System.out.println("Dept Name ");
+		dpt.setDeptname(sc.next());		
 		
 		sesObj.persist(dpt);
 		trans.commit();
